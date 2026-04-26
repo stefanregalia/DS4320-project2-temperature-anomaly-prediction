@@ -1,0 +1,42 @@
+## Problem Definition
+
+**Initial General Problem**: As human greenhouse gas emissions have increased over the years, global temperatures have risen, leading to unpredictable natural disasters, loss of habitat for wildlife, droughts, famine, and many more consequences. Forecasting these temperature changes is critical for preparing vulnerable regions for the effects of global warming.
+
+**Refined Specific Problem**: Using historical monthly surface temperature anomaly records from 1750 to 2020 for 10 countries across 6 continents, can we predict the annual temperature anomaly (deviation from the 1951–1980 baseline in degrees Celsius) using year, month, monthly temperature anomalies (how much one month deviated from the 1951-1980 average), and monthly anomaly uncertainty (the 95% confidence interval on the identified anomalies).
+
+The motivation behind this project is to predict annual temperature anomalies for a range of countries so that countries in all areas of the world can mitigate major consequences as a result of global warming. By predicting temperature anomalies for 10 countries across 6 different continents, we can identify the most vulnerable regions, as each region has a diverse climate and global warming trends vary across regions. Therefore, policymakers, humanitarian organizations, and infrastructure planners can further understand how to allocate resources and design strategies for adaptation for the most vulnerable regions. By building a regression model on historical surface temperature anomaly records, this project aims to make country-level global warming trends quantifiable and comparable.
+
+The general problem of forecasting global climate change was refined to focus on predicting annual temperature anomalies for 10 countries across 6 different continents. Specifically, the 10 countries, United States, Canada, Russia, Germany, Brazil, Nigeria, Egypt, India, China, and Australia were selected to represent North America, Europe, Asia, South America, Africa, and Oceania. There are many dimensions of climate change to focus on, such as carbon emissions, sea level rise, and increases in wildfire rates, but temperature anomalies were chosen as the target because rising temperatures are the underlying driver of many of these consequences. The 10 countries were selected to represent diverse climates and geographic regions, allowing for meaningful comparison of warming trends across the globe. Year and month were chosen as features because they capture the long-term warming trend and seasonal patterns, respectively. Monthly temperature anomaly was included because it captures how much temperatures in a given month deviated from historical trends, providing a direct measure of short-term warming. Monthly anomaly uncertainty was included because it reflects how reliably that deviation was measured, as earlier records have higher uncertainty due to sparse weather station coverage and modern records are more precise, allowing the model to account for varying data quality across time.
+
+[Machine Learning Model Predicts Country-Level Temperature Anomalies Across the Globe](press_release.md)
+
+## Domain Exposition
+
+| Term | Description |
+|---|---|
+| Annual Temperature Anomaly (Target) | The deviation of a country's annual surface temperature from the 1951–1980 baseline average, measured in degrees Celsius |
+| Year (Predictor) | Calendar year of the observation, captures the long-term warming trend |
+| Month (Predictor) | Calendar month of the observation (1–12), captures seasonal patterns |
+| Monthly Temperature Anomaly (Predictor) | How much a given month's temperature deviated from the 1951–1980 average for that same month, in degrees Celsius |
+| Monthly Anomaly Uncertainty (Predictor) | The 95% confidence interval on the monthly anomaly measurement, in degrees Celsius |
+| Country (Predictor) | The country for which the temperature anomaly is recorded |
+| Baseline Period  | The 1951–1980 reference window used to compute all anomalies |
+| GMST | Global Mean Surface Temperature, the average of all land and ocean surface temperatures worldwide |
+| Radiative Forcing | The change in energy flux in the atmosphere caused by greenhouse gases, measured in W/m² |
+| IPCC | Intergovernmental Panel on Climate Change, the UN body that synthesizes global climate science |
+| Regression | A machine learning task that predicts a continuous numerical value |
+| R² Score (KPI) | Measures how well the model explains variance in the target variable, ranges from 0 to 1 |
+| RMSE (KPI) | Root Mean Squared Error, measures average prediction error in degrees Celsius |
+| MAE (KPI) | Mean Absolute Error, measures average absolute prediction error in degrees Celsius |
+
+This project lives at the intersection of the environmental science and data science domains. Environmental science is the study of the Earth's natural systems and how human activity impacts them. Climate change, often caused by human greenhouse gas emissions, is one of the most common consequences of this human impact, and temperature anomalies are a popular metric used by institutions such as NASA, NOAA, and Berkeley Earth to measure and track global warming over time. The domain of data science contributes the machine learning techniques, regression analysis in this instance, to identify patterns in historical temperature records and predict future trends. Together, these domains allow us to move from simply observing climate change to quantifying and forecasting it at the country level.
+
+[Link to OneDrive Folder with Background Readings](https://myuva-my.sharepoint.com/:f:/g/personal/xtm9px_virginia_edu/IgBnQlPYhRMyTqUWdBzYjEF_AfB0bYVMzNCpYq6PGUmdtmc?e=TlEmHN)
+
+| Title | Description | Link |
+|---|---|---|
+| Summary of Findings (Berkeley Earth) | Overview of Berkeley Earth's methodology and key findings on global land surface temperature trends over 250 years | [Link to reading](https://myuva-my.sharepoint.com/personal/xtm9px_virginia_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings%2FSummary%20of%20Findings%20%2D%20Berkeley%20Earth%2Epdf&parent=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings&ga=1) |
+| Climate Change: Global Temperature (NOAA) | Explains how temperature anomalies are measured, why warming is uneven across regions, and future temperature projections | [Link to reading](https://myuva-my.sharepoint.com/personal/xtm9px_virginia_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings%2FClimate%20change%5F%20global%20temperature%20%5F%20NOAA%20Climate%2Egov%2Epdf&parent=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings&ga=1) |
+| Global Temperature Report for 2025 (Berkeley Earth) | Most recent annual temperature analysis including country-level trends and the accelerating rate of warming | [Link to reading](https://myuva-my.sharepoint.com/personal/xtm9px_virginia_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings%2FGlobal%20Temperature%20Report%20for%202025%20%2D%20Berkeley%20Earth%2Epdf&parent=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings&ga=1) |
+| Temperature Change Statistics 1961–2024 (FAO) | Country-level warming statistics for 198 countries, including the 10 countries in this project | [Link to reading](https://myuva-my.sharepoint.com/personal/xtm9px_virginia_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings%2FTemperature%20change%20statistics%201961%E2%80%932024%2E%20Global%2C%20regional%20and%20country%20trends%2Epdf&parent=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings&ga=1) |
+| Global Warming of 1.5°C (IPCC) | A report on regional climate change impacts, warming thresholds, and consequences for vulnerable regions | [Link to reading](https://myuva-my.sharepoint.com/personal/xtm9px_virginia_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings%2FGlobal%20Warming%20of%201%2E5%20%C2%BAC%20%E2%80%94%2Epdf&parent=%2Fpersonal%2Fxtm9px%5Fvirginia%5Fedu%2FDocuments%2FDesign%20Project%202%20Readings&ga=1) |
