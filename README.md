@@ -18,6 +18,7 @@ This repository contains the full implementation of a machine learning pipeline 
 
 ## Repository Structure
 
+```
 DS4320-project2-temperature-anomaly-prediction/
 ├── code/
 │   ├── ingestion.py          # Data ingestion script
@@ -31,7 +32,7 @@ DS4320-project2-temperature-anomaly-prediction/
 ├── LICENSE                   # MIT License
 ├── requirements.txt          # Python dependencies
 └── .gitignore                # Git ignore rules
-
+```
 
 ## Problem Definition
 
