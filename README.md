@@ -16,6 +16,22 @@ This repository contains the full implementation of a machine learning pipeline 
 
 **License:** [MIT LICENSE](LICENSE)
 
+## Repository Structure
+
+DS4320-project2-temperature-anomaly-prediction/
+├── code/
+│   ├── ingestion.py          # Data ingestion script
+│   ├── mongosh_sanity-check.js  # MongoDB sanity checks
+│   ├── pipeline.ipynb        # Analysis and modeling pipeline
+│   └── pipeline.md           # Pipeline saved as markdown
+├── visualizations/
+│   └── actual_vs_predicted.png  # Visualization
+├── press_release.md          # Project press release
+├── README.md                 # Project documentation
+├── LICENSE                   # MIT License
+├── requirements.txt          # Python dependencies
+└── .gitignore                # Git ignore rules
+
 
 ## Problem Definition
 
