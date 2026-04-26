@@ -1,3 +1,17 @@
+# DS 4320 Project 2: Predicting Country-Level Temperature Anomalies
+
+## Executive Summary
+
+This repository contains the full implementation of a machine learning pipeline to predict annual surface temperature anomalies for 10 countries across 6 continents using historical climate data from Berkeley Earth. The data was ingested from Berkeley Earth's publicly available Amazon S3 storage, parsed, and stored in a MongoDB Atlas document database containing 23,267 documents. An XGBoost regression model was trained on features including year, month, monthly temperature anomaly, measurement uncertainty, and country, achieving a test R² of 0.74 and a mean absolute error of 0.24°C. The repository includes the data ingestion script, MongoDB sanity checks, the full analysis pipeline, a press release, and complete metadata documentation.
+
+**Name:** Stefan Regalia
+**NetID:** xtm9px
+**DOI:** [10.5281/zenodo.19798275](https://doi.org/10.5281/zenodo.19798275)
+**Press Release:** [press_release.md](press_release.md)
+**Pipeline:** [pipeline.ipynb](code/pipeline.ipynb)
+**License:** MIT — [LICENSE](LICENSE)
+
+
 ## Problem Definition
 
 **Initial General Problem**: As human greenhouse gas emissions have increased over the years, global temperatures have risen, leading to unpredictable natural disasters, loss of habitat for wildlife, droughts, famine, and many more consequences. Forecasting these temperature changes is critical for preparing vulnerable regions for the effects of global warming.
