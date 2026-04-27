@@ -122,7 +122,7 @@ The following guidelines define the expected structure for documents in the `tem
   variable. All other fields are retained in the database for completeness
   and potential future use.
 
-  | Collection | Stored In | Documents | Countries | Year Range | Features | Description |
+| Collection | Stored In | Documents | Countries | Year Range | Features | Description |
 |---|---|---|---|---|---|---|
 | temperature_anomalies | MongoDB Atlas | 23,267 | 10 | 1750–2020 | 15 | Monthly surface temperature anomaly records for 10 countries across 6 continents, sourced from Berkeley Earth. Each document represents one monthly observation for one country, including anomaly values at monthly, annual, 5-year, 10-year, and 20-year smoothing levels along with uncertainty estimates for each. |
 
